@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slot {
+  width: 90%;
+  height: 90%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 6px solid black;
+}
+
+.slot p {
+  font-size: 11em;
+}
+
+.play-button {
+  font-size: 2em;
+  margin-top: 2%;
+  width: 15%;
+  cursor: pointer;
+  background-color: white;
+}
+
+.play-button:hover {
+  background-color: gainsboro;
+}
+
+.info {
+  width: 80%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info p {
+  font-size: 2em;
+}
+
+.plus,
+.minus {
+  background-color: white;
+  width: 2em;
+  font-size: 1em;
+}
+
+.plus:hover,
+.minus:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+.bet-div {
+  display: flex;
+}
+
+.announcement.win {
+  color: green;
+  font-size: 4em;
+}
