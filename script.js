@@ -8,6 +8,11 @@ const betElem = document.querySelector(".bet");
 const announcementElem = document.querySelector(".announcement");
 const minusElem = document.querySelector(".minus");
 const plusElem = document.querySelector(".plus");
+const closeModal = document.querySelector(".close-modal");
+const rules = document.querySelector(".rules");
+const showRules = document.querySelector(".show-rules");
+
+const winSound = new Audio("src/winAudio.wav");
 
 // Created an object containing all the possible picks and their bet multiplier at index
 const icons = {
@@ -16,7 +21,7 @@ const icons = {
   3: "🍉",
   4: "🍊",
   5: "🍑",
-  6: "🥭",
+  6: "🍓",
   7: "7️⃣",
 };
 
@@ -79,6 +84,7 @@ function ifWon(round, bet) {
     const sumWon = (bet *= keyByValue(icons, won));
     announcementElem.innerText = `You won: ${sumWon}`;
     announcementElem.classList.add("win");
+    winSound.play();
     return sumWon;
   } else {
     announcementElem.innerText = "Try again";
@@ -96,7 +102,7 @@ function updateDOM(round, budget, bet) {
   }
 
   budgetElem.innerText = `Budget ${budget}`;
-  betElem.innerText = `Budget ${bet}`;
+  betElem.innerText = `Bet ${bet}`;
 }
 
 // Creating a method for the object player, that will check if player is eligible to play and will call all the functions that make the game work
@@ -123,6 +129,11 @@ plusElem.addEventListener("click", () => {
   player.bet += 5;
   betElem.innerText = `Budget ${player.bet}`;
 });
+
+// Creating event listener for the button that closes and opens the rules dialogue box
+closeModal.addEventListener("click", () => rules.classList.toggle("hidden"));
+
+showRules.addEventListener("click", () => rules.classList.toggle("hidden"));
 
 // Creating an event listener that will call the play method on the player, and so the round wil begin
 playBtn.addEventListener("click", () => player.play());

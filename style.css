@@ -79,3 +79,63 @@ main {
   color: green;
   font-size: 4em;
 }
+
+.rules {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 40%;
+  max-width: 50%;
+  border-radius: 3%;
+  background-color: rgba(0, 0, 0, 0.579);
+  color: rgb(238, 255, 0);
+  font-size: 2em;
+  text-align: center;
+}
+
+.rules.hidden {
+  display: none;
+}
+
+.close-modal {
+  font-size: 1em;
+  width: 8em;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: gainsboro;
+}
+
+button {
+  border-radius: 2em;
+  margin: 0;
+}
+
+.button-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.button-container button:nth-child(2) {
+  position: absolute;
+  right: 0;
+}
+
+.show-rules {
+  font-size: 2em;
+  margin-top: 2%;
+  width: 15%;
+  cursor: pointer;
+  background-color: white;
+}
+
+.show-rules:hover {
+  background-color: gainsboro;
+}
