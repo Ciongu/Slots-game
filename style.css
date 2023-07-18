@@ -86,7 +86,7 @@ main {
   align-items: center;
   flex-direction: column;
   height: 40%;
-  max-width: 50%;
+  width: 50%;
   border-radius: 3%;
   background-color: rgba(0, 0, 0, 0.579);
   color: rgb(238, 255, 0);
@@ -138,4 +138,47 @@ button {
 
 .show-rules:hover {
   background-color: gainsboro;
+}
+
+@media (max-width: 920px) {
+  .slot p {
+    font-size: 5em;
+  }
+
+  .rules {
+    justify-content: space-around;
+    width: 80%;
+    height: 45%;
+    font-size: 1.3em;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .button-container button {
+    width: 30%;
+    font-size: 1.5em;
+  }
+
+  .button-container button:nth-child(2) {
+    position: revert;
+  }
+
+  .minus,
+  .plus {
+    height: 10%;
+  }
+
+  .info p {
+    font-size: 1.5em;
+  }
+
+  .announcement.win {
+    color: green;
+    font-size: 1.5em;
+  }
 }
